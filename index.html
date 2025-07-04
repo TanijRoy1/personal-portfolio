@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <!-- ---------Header section---------  -->
+    <header id="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand tanij-logo" href="#home">Tanij.</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars" id="toggle-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end w-100"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#home"
+                    style="--i: 1"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about" style="--i: 2">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#service" style="--i: 3">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skill" style="--i: 4">Skill</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#project" style="--i: 5">Project</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact" style="--i: 6">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- -----------Home Section------------  -->
+    <section id="home" class="home-section hero-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 d-lg-none d-block">
+            <div class="hero-img">
+              <div class="glow-container">
+                <img src="img/hero.jpg" alt="profile" class="glow-img" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-12">
+            <div class="home-content">
+              <h3>Hello, It's Me</h3>
+              <h1>Tanij Roy</h1>
+              <h3>And I'm a <span class="text"></span></h3>
+              <p>
+                I'm a self-taught web developer currently pursuing my BSc in
+                Electrical and Electronic Engineering at Shahjalal University of
+                Science and Technology.
+                <br />I specialize in building responsive and user-friendly
+                websites using HTML, CSS, JavaScript, and Bootstrap. I'm
+                continuously improving my skills to become a professional
+                full-stack developer.
+              </p>
+              <div class="home-sci">
+                <a
+                  href="https://www.facebook.com/tanij.roy"
+                  target="_blank"
+                  style="--i: 7"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://wa.me/8801843766897?text=Hi%2C%20Tanij.%20I%20saw%20your%20portfolio%20website%20and%20want%20to%20contact%20you."
+                  target="_blank"
+                  style="--i: 8"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  style="--i: 9"
+                  class="instagram-link"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" style="--i: 10" class="instagram-link">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+              <a href="#about" class="btn-box">More About Me</a>
+            </div>
+          </div>
+          <div class="col-lg-5 col-12 d-lg-block d-none">
+            <div class="hero-img">
+              <div class="glow-container">
+                <img src="hero.jpg" alt="profile" class="glow-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------about section--------------- -->
+    <section id="about" class="home-section about-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-4 col-12 about-img-col">
+            <div class="about-img">
+              <div class="glow-container">
+                <img src="img/about-img.jpg" alt="profile" class="glow-img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-12">
+            <div class="about-content">
+              <h1 class="heading">About <span>Me</span></h1>
+              <p>
+                I am a passionate and self-taught front-end web developer
+                currently studying Electrical and Electronic Engineering at
+                SUST. I’ve worked hard to learn web development skills including
+                HTML, CSS, JavaScript, and Bootstrap. I’ve already completed
+                several small projects and am now pursuing a full-stack MERN
+                bootcamp to expand my skills and build a professional career.
+              </p>
+              <div class="tab-container">
+                <div class="tab-title-list">
+                  <h5 class="tab-link active-link" onclick="openTab('skills')">
+                    Skills
+                  </h5>
+                  <h5 class="tab-link" onclick="openTab('experience')">
+                    Experience
+                  </h5>
+                  <h5 class="tab-link" onclick="openTab('education')">
+                    Education
+                  </h5>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                  <p style="--a: 3">
+                    <span>Web Design</span><br />
+                    Responsive website design using HTML, CSS, Bootstrap
+                  </p>
+                  <p style="--a: 6">
+                    <span>Web Development</span><br />
+                    JavaScript functionality and DOM interactions
+                  </p>
+                  <p style="--a: 9">
+                    <span>Version Control</span><br />
+                    Project tracking using Git & GitHub
+                  </p>
+                </div>
+                <div class="tab-contents" id="experience">
+                  <p style="--a: 2">
+                    <span>2023 - Present</span><br />
+                    Building personal projects and small freelance tasks as a
+                    front-end developer
+                  </p>
+                  <p style="--a: 5">
+                    <span>2022 - 2023</span><br />
+                    Learning web development through YouTube and practicing by
+                    building websites
+                  </p>
+                </div>
+                <div class="tab-contents" id="education">
+                  <p style="--a: 2">
+                    <span>Currently Studying</span><br />
+                    Undergraduate in BSc in Electrical and Electronic
+                    Engineering (EEE), SUST
+                  </p>
+                  <p style="--a: 5">
+                    <span>Self-Learning Phase</span><br />
+                    Frontend Development (HTML, CSS, JavaScript, Bootstrap)
+                    through online platforms
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------Service Section----------  -->
+    <section id="service" class="home-section service-section">
+      <div class="container">
+        <h1 class="heading text-center">My <span>Services</span></h1>
+        <div class="row gy-5">
+          <div class="col-lg-4 col-12">
+            <div class="service-box">
+              <i class="fas fa-code"></i>
+              <h3>PSD/Figma to HTML</h3>
+              <p>
+                I will convert your design (Figma, PSD, or XD) into a clean,
+                responsive HTML website using Bootstrap 5. Pixel-perfect,
+                mobile-friendly, and cross-browser compatible.
+              </p>
+              <button
+                class="btn learn-more"
+                data-bs-toggle="modal"
+                data-bs-target="#modal1"
+              >
+                learn more
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="service-box">
+              <i class="fas fa-bug"></i>
+
+              <h3>Bug Fixing</h3>
+              <p>
+                I fix layout issues, responsiveness problems, broken sections,
+                and CSS/JavaScript bugs in websites built with HTML, CSS,
+                Bootstrap, and JS.
+              </p>
+              <button
+                class="btn learn-more"
+                data-bs-toggle="modal"
+                data-bs-target="#modal2"
+              >
+                learn more
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="service-box">
+              <i class="fas fa-laptop-code"></i>
+
+              <h3>Website Design</h3>
+              <p>
+                I design and build simple, elegant websites for personal or
+                business use using HTML, CSS, JavaScript, and Bootstrap.
+                Responsive, fast, and clean code.
+              </p>
+              <button
+                class="btn learn-more"
+                data-bs-toggle="modal"
+                data-bs-target="#modal3"
+              >
+                learn more
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------Modal for learn More Button-------------------- -->
+    <!-- Modal 1: PSD/Figma to HTML -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">PSD/Figma to HTML</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            I will convert your Figma, PSD, or XD design into a high-quality,
+            responsive HTML website using Bootstrap 5. Pixel-perfect conversion,
+            mobile-first design, cross-browser compatibility, and clean,
+            semantic code included.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2: Bug Fixing -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bug Fixing</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            I will debug your HTML, CSS, or JavaScript code. From layout issues
+            and responsive design bugs to broken animations and JavaScript
+            errors — I’ll fix them quickly and effectively while keeping your
+            codebase clean.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Website Design -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Website Design</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            I create beautiful, functional websites tailored to your needs.
+            Whether it's a personal portfolio, blog, or business landing page, I
+            use HTML, CSS, JavaScript, and Bootstrap to ensure responsiveness,
+            performance, and great UX.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------MOdal end----------------------------- -->
+
+    <!-- ------------Skill Section------------  -->
+    <section id="skill" class="home-section skill-section">
+      <div class="container">
+        <h1 class="heading text-center">My <span>Skills</span></h1>
+        <div class="row gy-5">
+          <div class="col-lg-6 col-12">
+            <div class="skill-box">
+              <h4 class="skill-box-heading">Technical Skills</h4>
+              <div class="technical-bars d-flex flex-column align-items-center">
+                <div class="bar">
+                  <i class="fa-brands fa-html5" style="color: #c95d2e"></i>
+                  <div class="info"><span>HTML</span></div>
+                  <div class="progress-line html"><span></span></div>
+                </div>
+                <div class="bar">
+                  <i class="fa-brands fa-css3-alt" style="color: #147bbc"></i>
+                  <div class="info"><span>CSS</span></div>
+                  <div class="progress-line css"><span></span></div>
+                </div>
+                <div class="bar">
+                  <i class="fa-brands fa-js" style="color: #f7df1e"></i>
+                  <div class="info"><span>JavaScript</span></div>
+                  <div class="progress-line javascript"><span></span></div>
+                </div>
+                <div class="bar">
+                  <i class="fa-brands fa-react" style="color: #69bcbc"></i>
+                  <div class="info"><span>React</span></div>
+                  <div class="progress-line react"><span></span></div>
+                </div>
+                <div class="bar">
+                  <i class="fa-brands fa-bootstrap" style="color: #7952b3"></i>
+                  <div class="info"><span>Bootstrap</span></div>
+                  <div class="progress-line bootstrap"><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="skill-box d-flex flex-column align-items-center">
+              <h4 class="skill-box-heading">Professional Skills</h4>
+              <div class="radial-bars-list">
+                <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle
+                      class="progress-bar1"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                    <circle
+                      class="path path1"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                  </svg>
+                  <div class="percentage">90%</div>
+                  <div class="radial-bar-text">Creativity</div>
+                </div>
+                <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle
+                      class="progress-bar1"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                    <circle
+                      class="path path2"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                  </svg>
+                  <div class="percentage">65%</div>
+                  <div class="radial-bar-text">Communication</div>
+                </div>
+                <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle
+                      class="progress-bar1"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                    <circle
+                      class="path path3"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                  </svg>
+                  <div class="percentage">75%</div>
+                  <div class="radial-bar-text">Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle
+                      class="progress-bar1"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                    <circle
+                      class="path path4"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                    ></circle>
+                  </svg>
+                  <div class="percentage">85%</div>
+                  <div class="radial-bar-text">Teamwork</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------Project Section----------------  -->
+    <section id="project" class="home-section project-section">
+      <div class="container">
+        <h1 class="heading text-center">Latest <span>Projects</span></h1>
+        <div class="row gy-5 align-items-center"> 
+          
+          <div class="col-lg-4 col-12">
+            <div class="project-box" style="--p: 1">
+              <img src="img/project1.png" alt="" />
+              <h4 class="project-name text-center">Projects One</h4>
+              <div class="project-btns">
+                <a href="#" class="btn instagram-link">GitHub</a>
+                <a
+                  href="https://stellar-paletas-9a05ec.netlify.app/"
+                  target="_blank"
+                  class="btn"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="project-box" style="--p: 4">
+              <img src="img/project2.png" alt="" />
+              <h4 class="project-name text-center">Projects Two</h4>
+              <div class="project-btns">
+                <a href="#" class="btn instagram-link">GitHub</a>
+                <a
+                  href="https://splendorous-hotteok-eb2a2b.netlify.app/"
+                  target="_blank"
+                  class="btn"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="project-box" style="--p: 7">
+              <img src="img/project3.png" alt="" />
+              <h4 class="project-name text-center">Projects Three</h4>
+              <div class="project-btns">
+                <a href="#" class="btn instagram-link">GitHub</a>
+                <a href="#" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------Contact Section------------------  -->
+    <section id="contact" class="home-section contact-section">
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5 col-12">
+            <div class="contact-left">
+              <h1 class="heading">Contact <span>Me</span></h1>
+              <p>
+                I'm always open to freelance work, project collaboration, or
+                just a friendly chat about web development. If you have an idea,
+                need help with your website, or want to work together — feel
+                free to reach out!
+              </p>
+              <p>
+                <i class="fa-solid fa-paper-plane"></i> tanishroy480@gmail.com
+              </p>
+              <p><i class="fa-solid fa-square-phone"></i> +8801521799480</p>
+              <div class="contact-icons">
+                <a href="https://www.facebook.com/tanij.roy" target="_blank"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://wa.me/8801843766897?text=Hi%2C%20Tanij.%20I%20saw%20your%20portfolio%20website%20and%20want%20to%20contact%20you."
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+                <a href="#" class="instagram-link">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="instagram-link">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+              <a href="#" class="btn cv-btn">Download CV</a>
+            </div>
+          </div>
+          <div class="col-lg-7 col-12">
+            <div class="contact-right">
+              <form action="">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="emai"
+                  name="Email"
+                  placeholder="Your Email"
+                  required
+                />
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                  id=""
+                ></textarea>
+                <button class="btn submit-btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal message (initially hidden) -->
+    <div id="insta-modal">
+      <div class="insta-modal-content">
+        <p>
+          I haven’t created GitHub, Instagram, or LinkedIn accounts yet, but I
+          plan to do so in the near future.
+        </p>
+        <button id="close-modal">OK</button>
+      </div>
+    </div>
+
+    <footer>
+      <p class="text-center">Developed with ❤️ by Tanij Roy &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

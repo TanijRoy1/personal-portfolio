@@ -1,0 +1,934 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popins", sans-serif;
+}
+body {
+  color: #ededed;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------glow img-------------- */
+.glow-container {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(45deg, #00f2fe, #8e2de2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px #00f2fe, 0 0 60px #8e2de2;
+}
+.glow-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.hero-img {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------Header---------- */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background: transparent; */
+  z-index: 100;
+  background: #081c29cf;
+}
+.nav-link {
+  margin: 0 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #0ef;
+  left: 50%;
+  bottom: 3px;
+  transform: translateX(-50%);
+  transition: width 0.5s;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: #0ef !important;
+}
+.tanij-logo {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 29px;
+  font-weight: bold;
+  /* color: #4e00ff; */
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+.tanij-logo:hover {
+  color: #fff;
+}
+.tanij-logo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #4e00ff, #00f2fe);
+  margin-top: 0px;
+}
+#toggle-icon {
+  color: #fff;
+  font-size: 28px;
+}
+.navbar-toggler {
+  border: 2px solid #0ef;
+}
+.navbar {
+  --bs-navbar-padding-y: 0;
+}
+
+/* ------------------Home Section---------------  */
+.hero-section {
+  padding-top: 170px !important;
+}
+.home-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+  font-family: "Oswald", sans-serif;
+}
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 20px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+  font-size: 1.6rem;
+  font-family: "Oswald", sans-serif;
+}
+.home-content h3 span {
+  color: #0ef;
+}
+.home-content h1 {
+  font-size: 2.9rem;
+  font-weight: 700;
+  margin: 3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+
+  font-family: "Oswald", sans-serif;
+  margin-top: 15px;
+}
+.home-content p {
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+  font-family: "Roboto", sans-serif;
+}
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #081b29;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  box-shadow: 0 0 5px #0ef, 0 0 7px #0ef;
+
+  font-family: "Roboto", sans-serif;
+}
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan;
+}
+/* .btn-box:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
+    0 0 200px cyan;
+} */
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* ---------about section----------- */
+.home-section {
+  padding: 50px 0;
+  background: #081c29;
+}
+.tab-title-list {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 24px;
+}
+.about-content span {
+  color: cyan;
+}
+.about-content p {
+  font-family: "Roboto", sans-serif;
+}
+.heading {
+  font-family: "Roboto", sans-serif;
+}
+.heading span {
+  color: cyan;
+  font-family: "Oswald", sans-serif;
+}
+.tab-link {
+  position: relative;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.tab-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: cyan;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.5s;
+}
+.tab-link.active-link::after {
+  width: 60%;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+.tab-container {
+  height: 270px;
+}
+.about-img {
+  border: 20px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 20px #0ef;
+}
+.about-img .glow-container {
+  width: 200px;
+  height: 200px;
+}
+
+/* -----------sercice section------------  */
+.btn {
+  background: cyan;
+  box-shadow: 0 0 5px #00f2fe, 0 0 3px #8e2de2;
+}
+.service-box {
+  /* box-shadow: 0 0 13px #00f2fe, 0 0 3px #8e2de2; */
+  padding: 24px;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: all 0.5s;
+  box-shadow: 1px 1px 9px #012290f7, 1px 1px 9px #0053b8f7;
+  margin: 0 8px;
+  height: 330px;
+}
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 23px #00f2fe, 0 0 9px #8e2de2;
+}
+.service-box i {
+  font-size: 31px;
+  color: cyan;
+  margin-bottom: 27px;
+}
+.service-section h1 {
+  margin-bottom: 60px;
+}
+.service-box h3 {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.service-box p {
+  font-size: 0.95rem;
+  font-family: "Roboto", sans-serif;
+}
+.btn.learn-more {
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/* ------------Skill Section-----------  */
+.skill-section .heading {
+  margin-bottom: 45px;
+  margin-top: 40px;
+}
+.skill-box-heading {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.bar {
+  position: relative;
+  margin: 18px 0;
+  width: 80%;
+}
+.progress-line {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+}
+.progress-line span {
+  position: absolute;
+  height: 100%;
+  background-color: #0ef;
+  border-radius: 10px;
+  width: 80%;
+}
+.progress-line span::after {
+  content: "80%";
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: -28px;
+  right: -20px;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.progress-line.html span {
+  width: 90%;
+}
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span {
+  width: 75%;
+}
+.progress-line.css span::after {
+  content: "75%";
+}
+.progress-line.javascript span {
+  width: 60%;
+}
+.progress-line.javascript span::after {
+  content: "60%";
+}
+.progress-line.react span {
+  width: 20%;
+}
+.progress-line.react span::after {
+  content: "20%";
+}
+.progress-line.bootstrap span {
+  width: 70%;
+}
+.progress-line.bootstrap span::after {
+  content: "70%";
+}
+.info span {
+  font-family: "Roboto", sans-serif;
+}
+.percentage,
+.radial-bar-text {
+  font-family: "Roboto", sans-serif;
+}
+/* -----radial bar-----  */
+.progress-bar1 {
+  stroke-width: 10;
+  stop-color: #000;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: #000;
+}
+.path {
+  stroke-width: 10;
+  stroke: #0ef;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  /* stroke-dashoffset: 176; */
+}
+/* .path.path1{
+  stroke-dashoffset: 50.2;
+}
+.path.path2{
+  stroke-dashoffset: 175.7;
+} */
+.radial-bar svg {
+  width: 87px;
+  height: 87px;
+}
+.radial-bar {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+.radial-bars-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 45px;
+}
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 300;
+}
+.radial-bar-text {
+  position: absolute;
+  bottom: -26px;
+  font-size: 17px;
+}
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+}
+/* --------animation------- */
+.bar .info span {
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+.progress-line {
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progress-line span {
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progress-line span::after {
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.progress-line span::before {
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.radial-bar .progress-bar1 {
+  animation: animate-bar 1s linear forwards;
+}
+.radial-bar .path1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+.radial-bar .path2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+.radial-bar .path3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+.radial-bar .path4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+.radial-bar .percentage {
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+.radial-bar-text {
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50.265;
+    /* stroke-dashoffset: calc(502 * (1 - 0.90));  */
+    /* The calc() function only works in modern browsers for animations. */
+  }
+}
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 175.9275;
+    /* /* stroke-dashoffset: calc(502.65 * (1 - 0.65)); 65% */
+  }
+}
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 125.6625;
+    /* stroke-dashoffset: calc(502.65 * (1 - 0.75)); 75% */
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 75.3975;
+    /* stroke-dashoffset: calc(502.65 * (1 - 0.85)); 85% */
+  }
+}
+
+/* --------------Project Section-----------------  */
+.project-section .heading {
+  margin-bottom: 90px;
+  margin-top: 40px;
+}
+.project-box {
+  box-shadow: 0 0 10px #0ef;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 17px;
+  gap: 10px;
+  transition: all 0.5s;
+  margin: 0 16px;
+}
+.project-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+.project-btns {
+  display: flex;
+  gap: 25px;
+}
+.project-btns .btn {
+  font-size: 14px;
+  font-weight: 600;
+  --bs-btn-padding-y: 0;
+  font-family: "Roboto", sans-serif;
+}
+.project-name {
+  font-family: "Montserrat", sans-serif;
+}
+.project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 18px #0ef;
+}
+
+/* --------------Contact Section--------------- */
+.contact-left p {
+  font-family: "Roboto", sans-serif;
+}
+.cv-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.contact-icons {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+.contact-icons a {
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 29px;
+  height: 29px;
+}
+.contact-icons a i {
+  color: #0ef;
+}
+.contact-icons a:hover {
+  background-color: #0ef;
+  box-shadow: 0 0 10px #0ef;
+}
+.contact-icons a:hover i {
+  color: #081c29;
+}
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-right form input,
+.contact-right form textarea {
+  padding: 9px 0 9px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #434343;
+  color: #fff;
+}
+.contact-right form button {
+  font-size: 14px;
+  font-weight: 600;
+}
+.contact-right form {
+  font-family: "Roboto", sans-serif;
+}
+.cv-btn:hover,
+.submit-btn:hover {
+  background-color: rgb(2, 227, 243);
+  color: #081b29;
+  box-shadow: 0 0 12px #0ef;
+}
+.cv-btn,
+.submit-btn {
+  margin-top: 10px;
+}
+footer p {
+  margin-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  background-color: #050f17;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .service-box {
+    height: 360px;
+  }
+}
+@media (max-width: 991px) {
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 0;
+  }
+  .glow-container {
+    width: 300px;
+    height: 300px;
+  }
+  .hero-img {
+    margin-top: -77px;
+  }
+  .tab-title-list {
+    gap: 3rem;
+  }
+  .about-img-col {
+    display: flex;
+    justify-content: center;
+  }
+  .service-box {
+    height: 330px;
+  }
+}
+
+/* -----------------animation contron when scrolling------------------   */
+
+/* -------skill section--------  */
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.skill-section .progress-line,
+.skill-section .radial-bar .progress-bar1,
+.skill-section .radial-bar .path1,
+.skill-section .radial-bar .path2,
+.skill-section .radial-bar .path3,
+.skill-section .radial-bar .path4,
+.skill-section .bar .info span,
+.skill-section .progress-line span,
+.skill-section .progress-line span::after,
+.skill-section .progress-line span::before,
+.skill-section .radial-bar .percentage,
+.skill-section .radial-bar-text {
+  animation: none;
+}
+
+.skill-section.animate .progress-line {
+  animation: animate 1s 0.8s cubic-bezier(1, 0, 0, 1) forwards;
+}
+.skill-section.animate .radial-bar .progress-bar1 {
+  animation: animate-bar 1s linear forwards;
+}
+.skill-section.animate .radial-bar .path1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+.skill-section.animate .radial-bar .path2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+.skill-section.animate .radial-bar .path3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+.skill-section.animate .radial-bar .path4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+
+.skill-section.animate .bar .info span {
+  animation: showText 0.5s 1s linear forwards;
+}
+.skill-section.animate .progress-line span {
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+}
+.skill-section.animate .progress-line span::after {
+  animation: showText 0.5s 1.5s linear forwards;
+}
+.skill-section.animate .progress-line span::before {
+  animation: showText 0.5s 1.5s linear forwards;
+}
+.skill-section.animate .radial-bar .percentage {
+  animation: showText 0.5s 1s linear forwards;
+}
+.skill-section.animate .radial-bar-text {
+  animation: showText 0.5s 1s linear forwards;
+}
+
+/* -------home section---------  */
+.home-section .home-sci a,
+.home-section .home-content h3,
+.home-section .home-content h3:nth-of-type(2),
+.home-section .home-content h1,
+.home-section .home-content p,
+.home-section .home-sci a,
+.home-section .btn-box {
+  animation: none;
+}
+
+.home-section.animate .home-content h3 {
+  animation: slideBottom 1s ease forwards;
+}
+.home-section.animate .home-content h3:nth-of-type(2) {
+  animation: slideTop 1s ease forwards;
+}
+.home-section.animate .home-content h1 {
+  animation: slideRight 1s ease forwards;
+}
+.home-section.animate .home-content p {
+  animation: slideLeft 1s ease forwards;
+}
+.home-section.animate .home-sci a {
+  animation: slideLeft 1s ease forwards;
+}
+.home-section.animate .btn-box {
+  animation: slideTop 1s ease forwards;
+}
+
+.home-section.animate .home-sci a {
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+/* ---------service section-----------  */
+.service-section .btn.learn-more {
+  animation: none;
+}
+.service-section.animate .btn.learn-more {
+  animation: slideTop 1s ease forwards;
+}
+
+/* ------------------about section animation------------ */
+.tab-contents.active-tab p {
+  opacity: 0;
+}
+.about-section .tab-contents.active-tab p {
+  animation: none;
+}
+.about-section.animate .tab-contents.active-tab p {
+  animation: slideLeft 0.6s linear forwards;
+  animation-delay: calc(0.2s * var(--a));
+}
+.tab-container,
+.about-section {
+  overflow-x: hidden;
+}
+
+/* ---------------service section animation---------- */
+.service-section .service-box i {
+  animation: none;
+  opacity: 0;
+}
+.service-section.animate .service-box i {
+  animation: slideLeft 1s linear forwards;
+}
+
+/* -------------project section animation-------------- */
+.project-box {
+  opacity: 0;
+  animation: none;
+}
+.project-section.animate .project-box {
+  animation: slideLeft 0.8s linear forwards;
+  animation-delay: calc(0.2s * var(--p));
+}
+@media (max-width: 991px) {
+  .project-section.animate .project-box {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+
+/* -------------modal to learn more button------------ */
+.modal-content{
+  border: 2px solid #0ef;
+    background: #02011b;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+.modal-content .modal-title{
+  font-family: "Montserrat", sans-serif;
+}
+.modal-content .btn-close{
+  filter: invert(1);
+}
+
+
+
+/* ------------------showing msg to instagram--------------  */
+#insta-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.insta-modal-content {
+  background: #070012;
+  padding: 20px 18px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 2px solid #0ef;
+  box-shadow: 0 0 15px #0558ed;
+  max-width: 345px;
+}
+.insta-modal-content p {
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+.insta-modal-content button {
+  padding: 8px 16px;
+  background: #0ef;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
