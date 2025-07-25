@@ -664,6 +664,8 @@ html {
 }
 .project-name {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.15rem;
+  padding: 10px 0;
 }
 .project-box:hover {
   transform: translateY(-10px);
